@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@builder.io/react": "^4.0.4",
-    "@builder.io/sdk": "^2.2.9",
     "@chakra-ui/react": "^2.8.2",
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.13.3",
