@@ -48,7 +48,7 @@ const ImageSlider = () => {
           <img src="/cedar-fence3.jpg" alt="cedar fence3" className="slider-image"/>
         </div>
       </Slider>
-      <style jsx>{`
+      <style>{`
         .slider-container {
           width: 100%;
           max-width: 800px;
