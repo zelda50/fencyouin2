@@ -3,18 +3,11 @@ import Image from 'next/image';
 import Hero from '../components/Hero';
 import SEOHead from '../components/SEOHead';
 import Footer from '../components/Footer';
-import Gallery from '../components/Gallary';
-import ImageSlider from '../components/ImageSlider';
 import Layout1 from '../components/Layout1';
 import Layout2 from '../components/Layout2';
-import Testimonial from '../components/Testimonial';
 import Contact from '../components/Contact';
 import FenceStyles from '../components/FenceStyles';
-import GoogleReviews from '../components/GoogleReviews';
 import ScrollingTestimonials from '../components/ScrollingTestimonials';
-import TextParallaxContentExample from '../components/TextParallax';
-import OppoScroll from '../components/OppoScroll';
-import Footer2 from '../components/Footer2';
 import PopupAd  from '../components/PopupAd';
 import TrackVisitor from '../components/trackVisitor';
 

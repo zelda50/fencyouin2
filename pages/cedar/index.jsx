@@ -1,5 +1,5 @@
 import React from 'react'
-import CedarPage from '../../components/Cedarpage'
+import CedarPage from '../../components/CedarPage'
 import Footer from '../../components/Footer'
 
 function cedar() {
