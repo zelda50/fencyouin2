@@ -19,13 +19,6 @@ const completedJobs = [
     imageUrl: "/vinyl-picket.jpg?height=300&width=400",
   },
   {
-    id: 6,
-    title: "Bamboo Screen Fence",
-    description: "Natural bamboo fence for eco-friendly screening",
-    date: "2023-08-15",
-    imageUrl: "/cedarfence.mp4", // Video URL for MP4 file
-  },
-  {
     id: 2,
     title: "Classic vinyl Picket Fence",
     description: "4ft white picket fence for front yard",
