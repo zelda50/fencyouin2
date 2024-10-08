@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "export": "next build && next export",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@nextui-org/system": "^2.1.2",
     "@nextui-org/theme": "^2.2.3",
     "@shadcn/ui": "^0.0.4",
+    "@vercel/blob": "^0.24.0",
     "aws-sdk": "^2.1690.0",
     "axios": "^1.7.4",
     "emailjs-com": "^3.2.0",

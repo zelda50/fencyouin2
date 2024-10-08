@@ -57,6 +57,9 @@ export default function Footer() {
         <Link href="https://www.facebook.com/people/Brookdale-Lumber-Hardware/61560290933467/" target="_blank" rel="noopener noreferrer" passHref> 
         <img className="w-16 h-16 -mt-12" alt="Logo 2" src="/bdlogo.jpeg" />
         </Link>
+        <Link href="https://nextdoor.com/news_feed/" target="_blank" rel="noopener noreferrer" passHref> 
+        <img className="w-16 h-16 -mt-12" alt="Logo 2" src="/nfavelogo2.png" />
+        </Link>
         {/* Add more logos as needed */}
       </div>
       <div className="bg-muted py-4 text-center text-sm text-white">

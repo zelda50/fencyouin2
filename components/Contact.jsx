@@ -25,21 +25,45 @@ const Contact = ({ className = "" }) => {
 
     // EmailJS configuration
     const serviceID = "service_09ef1h8"; // Replace with your EmailJS service ID
-    const templateID = "template_oe1mo4m"; // Replace with your EmailJS template ID
-    const userID = "s_D846xK8FhLybK3L"; // Replace with your EmailJS user ID or public key
-
-    // Sending the email through EmailJS
+    const ownerTemplateID = "template_xmszl6q"; // Template for your email (form owner)
+    const userTemplateID = "template_oe1mo4m"; // Template for the user's confirmation email
+    const userID = "s_D846xK8FhLybK3L"; // Replace with your EmailJS user ID
     try {
-      const response = await emailjs.send(
+      // Send the email to yourself (form owner)
+      const ownerResponse = await emailjs.send(
         serviceID,
-        templateID,
-        formData,
+        ownerTemplateID,
+        {
+          from_name: formData.name,  // Form submitter's name
+          from_email: formData.email,  // Form submitter's email
+          message: formData.message,  // Form submitter's message
+          to_name: "Landmark Creations",
+          to_email: "info@fenceyouin.com", // Your email address
+        },
         userID
       );
 
-      if (response.status === 200) {
+      if (ownerResponse.status === 200) {
+        console.log("Email sent to owner successfully.");
+      } else {
+        setErrorMessage("Failed to send the email to owner.");
+        console.error("Failed to send email to owner:", ownerResponse);
+      }
+
+      // Send a confirmation email to the user who submitted the form
+      const userResponse = await emailjs.send(
+        serviceID,
+        userTemplateID,
+        {
+          name: formData.name,  // Form submitter's name
+          email: formData.email,  // Form submitter's email (recipient of confirmation email)
+        },
+        userID
+      );
+
+      if (userResponse.status === 200) {
         setIsSubmitted(true);
-        setShowModal(true); // Show the modal on success
+        setShowModal(true);
         setFormData({
           name: "",
           email: "",
@@ -47,7 +71,7 @@ const Contact = ({ className = "" }) => {
         });
       } else {
         setErrorMessage("Something went wrong. Please try again.");
-        console.error("Failed to send email:", response); // Log detailed response
+        console.error("Failed to send email to user:", userResponse);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -71,7 +95,7 @@ const Contact = ({ className = "" }) => {
         />
         <div className="flex-1 flex flex-col items-start justify-start gap-8">
           <div className="self-stretch flex flex-col items-start justify-start gap-4">
-            <div className="relative leading-[150%] text-3xl font-bold">Sched&#39;ule a free Estimate</div>
+            <div className="relative leading-[150%] text-3xl font-bold">Schedule a free Estimate</div>
             <div className="self-stretch flex flex-col items-start justify-start gap-6 text-left text-29xl">
               <b className="self-stretch relative leading-[120%]">Don&#39;t hesitate to contact us!</b>
             </div>
@@ -123,7 +147,7 @@ const Contact = ({ className = "" }) => {
             </div>
             <button
               type="submit"
-              className="w-[101px] bg-text-primary border-text-primary border-[1px] border-solid box-border flex flex-row items-center justify-center py-3 px-6 text-background-color-primary"
+              className="w-[101px] bg-black border-black text-white border-[1px] border-solid box-border flex flex-row items-center justify-center py-3 px-6 hover:bg-red-500 hover:text-white"
             >
               Submit
             </button>

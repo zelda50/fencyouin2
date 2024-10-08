@@ -10,7 +10,12 @@ const nextConfig = {
     domains: [
       'images.unsplash.com',
     ],
+    unoptimized: true,  // Disable image optimization for static export
   },
+  output: 'export',  // Static export setting
 };
 
+// Export the final configuration wrapped with the plugins
 module.exports = withBuilderDevTools(withVideos(nextConfig));
+
+
