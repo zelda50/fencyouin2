@@ -12,7 +12,7 @@ const nextConfig = {
     ],
     unoptimized: true,  // Disable image optimization for static export
   },
-  output: 'export',  // Static export setting
+  // output: 'export',  // Static export setting
 };
 
 // Export the final configuration wrapped with the plugins
