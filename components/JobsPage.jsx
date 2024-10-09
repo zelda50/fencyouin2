@@ -20,13 +20,13 @@ const completedJobs = [
     id: 2,
     title: "Lexington Cedar Fence",
     description: "6ft tall privacy cedar fence",
-    imageUrl: "/cedarfence.mp4",
+    imageUrl: "/video/cedarfence.mp4",
   },
   {
     id: 2,
     title: "Black Chainlink With Black Slats",
     description: "6ft tall privacy fence",
-    imageUrl: "/clfence.mp4",
+    imageUrl: "/video/clfence.mp4",
   },
   {
     id: 2,

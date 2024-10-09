@@ -10,29 +10,6 @@ const Gallery = ({ className = "" }) => {
           Our Work
         </div>
       </div>
-      {/* <div className="self-stretch flex flex-col sm:flex-row items-start justify-start gap-11">
-        <div className="flex-1 h-[300px] relative max-w-full overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
-            alt="Chain Link"
-            src="/IMG_4601.jpg"
-          />
-        </div>
-        <div className="flex-1 h-[300px] relative max-w-full overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
-            alt="Cedar Panel"
-            src="/IMG_4380.jpg"
-          />
-        </div>
-        <div className="flex-1 h-[300px] relative max-w-full overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
-            alt="Work Image"
-            src="/IMG_5137.jpg"
-          />
-        </div>
-      </div> */}
     </div>
   );
 };
